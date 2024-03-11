@@ -6,16 +6,16 @@ Para empezar crea un nuevo proyecto en PyCharm y abre un archivo Python.
 Abre la terminal o consola.
 Ejecuta el siguiente comando para instalar la librería:
 
-'''
+```
 pip install discord-webhook
-'''
+```
 
 ## Creación de un Webhook en Discord:
 En tu servidor de Discord, haz clic en la rueda de configuración y selecciona “Interacciones”.
 
 Si no tienes un webhook, crea uno y copia el enlace proporcionado.
 
-'''
+```
 ##Código Python:
 Copia el siguiente código en tu archivo Python:
 
@@ -47,16 +47,16 @@ def lambda_handler(event, context):
     	'statusCode': 200,
     	'body': json.dumps('Hello from Discord Lambda!')
 	}
-'''
+```
 
 ## Crea un webhook 
 
 Lo puedes crear en Discord accediendo a un canal de audio en la tuerca, dirigiendote a Integraciones y agregando nuevo Webhook, ahi podras copiar el link que necesitaras pegar en:
 
-'''
+```
 #Creamos el webhook y el embed, sustituyendo el enlace al webhook por el que hayamos creado en Discord
 webhook = DiscordWebhook(url="enlace al webhook")
-'''
+```
 
 ## Configuración en AWS Lambda:
 Crea una función en AWS Lambda (asegúrate de que sea en Python).
