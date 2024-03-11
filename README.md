@@ -2,7 +2,7 @@
 
 Para empezar crea un nuevo proyecto en PyCharm y abre un archivo Python.
 
-## Instalación de la librería discord-webhook:
+### Instalación de la librería discord-webhook:
 Abre la terminal o consola.
 Ejecuta el siguiente comando para instalar la librería:
 
@@ -10,7 +10,7 @@ Ejecuta el siguiente comando para instalar la librería:
 pip install discord-webhook
 ```
 
-## Creación de un Webhook en Discord:
+### Creación de un Webhook en Discord:
 En tu servidor de Discord, haz clic en la rueda de configuración y selecciona “Interacciones”.
 
 Si no tienes un webhook, crea uno y copia el enlace proporcionado.
@@ -48,12 +48,12 @@ def lambda_handler(event, context):
     	'body': json.dumps('Hello from Discord Lambda!')
 	}
 ```
-## Configuración en AWS Lambda:
+### Configuración en AWS Lambda:
 Crea una función en AWS Lambda (asegúrate de que sea en Python).
 Añade una capa que incluya la librería discord-webhook.
 Copia y pega el código en la función.
 
-## Ejecución:
+### Ejecución:
 Lanza la función en AWS Lambda.
 Verifica que no haya errores en los registros.
 El mensaje debería aparecer en el canal de Discord especificado por el webhook.
