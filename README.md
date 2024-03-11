@@ -48,40 +48,12 @@ def lambda_handler(event, context):
     	'body': json.dumps('Hello from Discord Lambda!')
 	}
 ```
-
-## Crea un webhook 
-
-Lo puedes crear en Discord accediendo a un canal de audio en la tuerca, dirigiendote a Integraciones y agregando nuevo Webhook, ahi podras copiar el link que necesitaras pegar en:
-
-```
-#Creamos el webhook y el embed, sustituyendo el enlace al webhook por el que hayamos creado en Discord
-webhook = DiscordWebhook(url="enlace al webhook")
-```
-
 ## Configuración en AWS Lambda:
 Crea una función en AWS Lambda (asegúrate de que sea en Python).
 Añade una capa que incluya la librería discord-webhook.
 Copia y pega el código en la función.
-Ejecución:
+
+## Ejecución:
 Lanza la función en AWS Lambda.
 Verifica que no haya errores en los registros.
 El mensaje debería aparecer en el canal de Discord especificado por el webhook.
-
-## Configuración de AWS Lambda para Ejecutar el Script
-Inicia sesión en la Consola de Administración de AWS
-
-Busca y selecciona “Lambda” en la barra de búsqueda o encuentra el servicio en la lista de servicios.
-
-Haz clic en el botón “Crear función”.
-
-Selecciona “Python 3.12” o una versión posterior.
-
-Crea un nuevo rol o selecciona uno existente que tenga permisos para acceder a los recursos de AWS necesarios (como S3, DynamoDB, etc.).
-
-Puedes escribir directamente el código en el editor de la consola.
-
-Después de crear la función, ve a la pestaña “Pruebas”.
-Crea un evento de prueba (por ejemplo, “test”) y guárdalo.
-
-Necesitas agregar dependencias adicionales (como la librería discord-webhook), puedes adjuntar la carpeta del discord comprimida.
-Guarda los cambios y ejecuta tu función para verificar que se ejecute correctamente.
